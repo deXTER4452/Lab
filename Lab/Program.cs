@@ -5,32 +5,70 @@ int GetNumberInput(int myNum)
 {
     
      myNum = Int32.Parse(Console.ReadLine());
-    //string[] myArray = new string[myNum];
-    //Console.WriteLine("Please enter " + myNum + " words");
-    //for (int i = 0; i < myArray.Length; i++)
-    //{
-    //    myArray[i] = Console.ReadLine();
 
-    //};
 
     return myNum;
 }
 
-//Console.WriteLine("Please enter a character");
-//char myChar = Console.ReadKey().KeyChar;
-//int counter = 0;
-//double percentage = 0;
+string[] PopulateWordArray(int length)
+{
+    string[] myArray = new string[length];
+    Console.WriteLine("Please enter " + length + " words");
+    for (int i = 0; i < myArray.Length; i++)
+    {
+        myArray[i] = Console.ReadLine();
 
-//for (int i = 0; i < myArray.Length; i++)
-//{
-//    for (int j = 0; j < myArray[i].Length; j++)
-//    {
-//        if (myChar == myArray[i][j])
-//        {
-//            counter++;
-//        }
-//        //percentage = (counter/myArray[i].Length) * 100;
-//    }
-//}
+    };
 
-//Console.WriteLine(" /n The letter " + myChar + "appears " + counter + " times in the array. This letter makes up more than " + percentage + "% of the total number of characters.");
+    return myArray;
+}
+
+
+Console.WriteLine("Please enter a character");
+char getCharacterInput()
+{
+    char myChar = Console.ReadKey().KeyChar;
+
+    return myChar;
+}
+
+
+
+
+
+int CountCharacters(string[] words, char charToCount)
+{
+    int counter = 0;
+    
+
+    for (int i = 0; i < words.Length; i++)
+    {
+        for (int j = 0; j < words[i].Length; j++)
+        {
+            if (charToCount == words[i][j])
+            {
+                counter++;
+            }
+            
+        }
+    }
+
+    return counter;
+}
+
+int GetCharacterOccurrencePercentage(string[] words, char charToCount)
+{
+    int percentage = 0;
+    for(int i = 0; i < words.Length; i++)
+    {
+        percentage = (charToCount / words[i].Length) * 100;
+    }
+    return percentage;
+    
+}
+
+
+void PrintResults(char countedCharacter, int charFrequency, int charPercentage, int totalChars)
+{
+    Console.WriteLine(" /n The letter " + countedCharacter + "appears " + charFrequency + " times in the array. This letter makes up more than " + charPercentage + "% of the total number of characters.");
+}
