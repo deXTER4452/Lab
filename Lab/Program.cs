@@ -21,7 +21,7 @@ for (int i = 0; i < myArray.Length; i++)
         {
             counter++;
         }
-        //percentage = (counter/myArray[i].Length) * 100;
+         percentage =  (counter/myArray[i].Length) * 100;
     }
 }
 
