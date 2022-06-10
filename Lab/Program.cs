@@ -58,12 +58,14 @@ int CountCharacters(string[] words, char charToCount)
 
 int GetCharacterOccurrencePercentage(string[] words, char charToCount)
 {
-    int percentage = 0;
+    double percentage = 0;
+    
     for(int i = 0; i < words.Length; i++)
     {
         percentage = (charToCount / words[i].Length) * 100;
     }
-    return percentage;
+    int intPercentage = Convert.ToInt32(percentage);
+    return intPercentage;
     
 }
 
