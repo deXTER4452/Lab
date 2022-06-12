@@ -74,3 +74,4 @@ void PrintResults(char countedCharacter, int charFrequency, int charPercentage, 
 {
     Console.WriteLine(" /n The letter " + countedCharacter + "appears " + charFrequency + " times in the array. This letter makes up more than " + charPercentage + "% of the total number of characters.");
 }
+//
