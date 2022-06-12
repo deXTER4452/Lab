@@ -26,3 +26,5 @@ for (int i = 0; i < myArray.Length; i++)
 }
 
 Console.WriteLine(" /n The letter " + myChar + "appears " + counter + " times in the array. This letter makes up more than " + percentage + "% of the total number of characters.");
+
+//
